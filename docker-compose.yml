@@ -1,0 +1,9 @@
+version: "3.2"
+
+services:
+  gcd-emulator:
+    image: google/cloud-sdk:latest
+    network_mode: host
+    expose:
+      - 8081
+    command: gcloud beta emulators datastore start --project=datastore-testing --no-store-on-disk
